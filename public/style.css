@@ -1,0 +1,98 @@
+body {
+    margin: 0 auto;
+    max-width: 700px;
+    min-width: 0;
+    padding: 0 10px 25px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: #444;
+
+    display: grid;
+    row-gap: 5px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+    "header nav"
+    "ct ct"
+}
+
+links {
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-around;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+    font-size: 23px;
+}
+nav a {
+    margin-left: 20px;
+    text-align: right;
+}
+
+h1, h2, strong {
+    color: #222;
+}
+
+header {
+    margin: 0px;
+    font-size: 23px;
+
+    grid-area: header;
+    justify-self: left;
+    align-self: end;
+}
+article {
+    font-size: 16px;
+    grid-area: ct;
+    border-top: 2px solid gray;
+}
+nav {
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    grid-area: nav;
+    justify-self: right;
+    align-self: end;
+}
+h1 {
+    font-size: 26px;
+}
+
+a {
+    color: #ffa64d;
+}
+
+.svg-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    padding-right: 5px;
+    fill: #828282;
+    vertical-align: text-top;
+}
+
+.header-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 430px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+        grid-template-areas:
+    "header"
+    "nav"
+    "ct"
+    }
+    header, nav {
+        text-align: center;
+        justify-self: center;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+}
