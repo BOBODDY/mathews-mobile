@@ -1,1 +1,3 @@
-# mathews-mobile
+# Mathews Mobile website
+
+This is the repo for my personal website.
